@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import Navbar from './navbar'
 
 function App() {
-  return <h1>test</h1>
+  return (
+    <Navbar></Navbar>
+  )
 }
 
 export default App
