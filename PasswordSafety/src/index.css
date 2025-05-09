@@ -28,3 +28,8 @@ nav ul{
   margin-top: 2%;
   margin-left: 3%;
 }
+
+.headerText{
+  font-weight: 450;
+  color: #53535a;
+}
