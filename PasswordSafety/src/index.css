@@ -2,6 +2,7 @@ body{
   font-family: "Open Sans";
   padding: 0;
   margin: 0;
+  color: #53535a;
 }
 
 nav{
@@ -39,4 +40,13 @@ nav ul{
 .highlight{
   font-weight: lighter;
   font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.textObject{
+  margin-top: -10px;
+}
+
+.subheaderText{
+  font-weight: 400;
 }

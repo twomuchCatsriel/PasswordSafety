@@ -3,8 +3,7 @@ import { useState } from 'react'
 // Components
 import Navbar from './navbar'
 import LinkPath from './links'
-import HeaderText from './header'
-import Highlight from './highlight'
+import Article from './Article'
 
 function App() {
   return (
@@ -12,10 +11,7 @@ function App() {
       <Navbar/>
       <div className="defaultMargins">
         <LinkPath/>
-        <section>
-          <HeaderText name="Passord Sikkerhet"/>
-          <Highlight name="Husker du den forrige gangen du endret de viktigste passordene dine?"/>
-        </section>
+        <Article/>
       </div>
 
     </div>
