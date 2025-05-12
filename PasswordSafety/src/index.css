@@ -51,3 +51,12 @@ nav ul{
   font-weight: 400;
   margin-top: 3%;
 }
+
+.urlClass{
+  color: #8dc63f;
+  text-decoration: none;
+}
+
+.urlClass:hover{
+  text-decoration: underline;
+}
