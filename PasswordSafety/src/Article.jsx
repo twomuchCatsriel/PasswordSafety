@@ -5,6 +5,7 @@ import Highlight from "./highlight";
 import Text from "./text";
 import Subheader from "./subheader";
 import URL from "./url";
+import Bold from "./boldText";
 
 function Article(){
     return(
@@ -21,9 +22,34 @@ function Article(){
             <Text txt="Det er derfor viktig å ha et sterkt passord, slik at ingen kan gjette seg inn på brukerkontoen din.
             Heldigvis så er det veldig enkelt å lage et sikkert passord."></Text>
             
-            <Text txt="1 - Passordet burde være 16 karakterer eller lenger."></Text>
-            <Text txt="2 - Passordet burde være unikt for hver eneste nettside."></Text>
-            <Text txt="3 - Passordet burde ha både tall, spesialsymboler og en blanding av store og små bokstaver."></Text>
+            
+            <div className="Paragraphs">
+                <Highlight name="Passordet burde følge disse reglene:"></Highlight>
+                <Text txt="1 - Passordet burde være 16 karakterer eller lenger."></Text>
+                <Text txt="2 - Passordet burde være unikt for hver eneste nettside."></Text>
+                <Text txt="3 - Passordet burde ha både tall, spesialsymboler og en blanding av store og små bokstaver."></Text>
+                <Text txt="4 - Passordet burde ikke ha ord eller tall som er koblet til deg. (Fødselsdato, Navn, Adresse osv.)"></Text>
+            </div>
+
+            <div className="Paragraphs">
+                <Bold name="Eksempler på gode passord:"></Bold>
+                <Text txt="%z!iNzgK2SZZftkCo7S$"></Text>
+                <Text txt="Venus_Quota_Driver_Extraterrestrial_Miscarriage967@"></Text>
+                <Text txt="PaintStoolLeader472^2"></Text>
+
+                <Bold name="Eksempler på dårlige passord:"></Bold>
+                <Text txt="Passord1234"></Text>
+                <Text txt="12345"></Text>
+                <Text txt="skateboard1"></Text>
+                <Text txt="StrongPassword"></Text>
+            </div>
+
+            <Subheader name="Hvordan skal jeg huske et sterkt passord?"></Subheader>
+            <Text txt="Et sterkt passord kan være vanskelig å huske, hvertfall hvis du bruker et forksjellig passord overalt. Så, hva gjør man da?"></Text>
+            <Text txt="Den enkleste og mest populære løsningen er å bruke et Passordhåndteringsprogram (Password Manager)."/>
+            <Text txt="Et Passordhåndteringsprogram er et sikkert program som lagrer passordene dine i en sikker, kryptert sky.
+            Programmet bruker et Mesterpassord som burde skrives ned, men lar deg se alle passordene dine i en skjerm."></Text>
+            
         </section>
     )
 }

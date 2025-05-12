@@ -60,3 +60,25 @@ nav ul{
 .urlClass:hover{
   text-decoration: underline;
 }
+
+.Indent{
+  margin-left: 5%;
+}
+
+.Paragraphs{
+  margin-top: 2%;
+}
+
+.boldTextClass{
+  font-weight: 600;
+}
+
+@media screen and (max-width: 480px) { /* Mobile Users */
+  .subheaderText{
+    margin-top: 10%;
+  }
+
+  #PasswordItems{
+    margin-top: 10%;
+  }
+}
