@@ -47,9 +47,17 @@ function Article(){
             <Subheader name="Hvordan skal jeg huske et sterkt passord?"></Subheader>
             <Text txt="Et sterkt passord kan være vanskelig å huske, hvertfall hvis du bruker et forksjellig passord overalt. Så, hva gjør man da?"></Text>
             <Text txt="Den enkleste og mest populære løsningen er å bruke et Passordhåndteringsprogram (Password Manager)."/>
-            <Text txt="Et Passordhåndteringsprogram er et sikkert program som lagrer passordene dine i en sikker, kryptert sky.
-            Programmet bruker et Mesterpassord som burde skrives ned, men lar deg se alle passordene dine i en skjerm."></Text>
-            
+            <Text txt="Et Passordhåndteringsprogram er et sikkert program som lagrer passordene dine i en sikker, kryptert sky."></Text>
+            <Text txt="Alt du trenger å huske er ett mesterpassord, som burde skrives ned og lagres på et sikkert sted."></Text>
+            <p className="textObject">Det finnes mange gode passordhåndteringsprogrammer. Noen programmer er også gratis å bruke, slik som 
+                <URL link="https://bitwarden.com" display=" Bitwarden."/></p> 
+
+
+            <Subheader name="Totrinnsbekreftelse"></Subheader>
+            <Text txt="ToTrinnsbekreftelse, eller 2FA (2 Factor Authentication) er et ekstra sikkerhetsnivå som krever at brukeren skriver inn en midlertidig tallkode
+            hver gang man logger inn på en konto."></Text>
+            <Text txt="2FA øker sikkerheten på en konto og gjør det mye vanskeligere for hackere å komme inn på brukerne dine, selv hvis de har tilgang til passordet ditt."></Text>
+            <Text txt="Mange steder støtter 2FA innlogging, og det er derfor anbefalt å aktivere dette når mulig."></Text>
         </section>
     )
 }

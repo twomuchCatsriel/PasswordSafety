@@ -9,6 +9,7 @@ function App() {
   return (
     <div>
       <Navbar/>
+      <img src="\src\assets\haxx2.jpg" id='haxx'></img>
       <div className="defaultMargins">
         <LinkPath/>
         <Article/>
