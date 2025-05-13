@@ -12,7 +12,9 @@ nav{
 }
 
 .defaultMargins{
-  margin: 2% 3%;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 nav ul{
@@ -83,6 +85,7 @@ nav ul{
   height: 200px;
   margin-top: 5px;
 }
+
 
 @media screen and (max-width: 480px) { /* Mobile Users */
   .subheaderText{

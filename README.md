@@ -8,3 +8,5 @@ The Website includes information about Password Security, and a Password Analyze
 This website is written in Norwegian for a school project, unlike most of my other projects that are written in English.
 This is also using vite React instead of raw HTML/CSS Code like I usually use.
 
+# CREDITS
+Image - https://pixabay.com/illustrations/cyber-security-hacking-computer-7231027/
