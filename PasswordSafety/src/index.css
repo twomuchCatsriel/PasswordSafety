@@ -92,6 +92,20 @@ nav ul{
   list-style-image: url(assets/green-check_png.png);
 }
 
+#Checker{
+  background-color: #ececec;
+  border-radius: 15px;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box{
+  text-align: center;
+  justify-content: center;
+}
 
 @media screen and (max-width: 480px) { /* Mobile Users */
   .subheaderText{

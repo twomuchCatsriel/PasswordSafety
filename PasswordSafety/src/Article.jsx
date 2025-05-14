@@ -57,8 +57,8 @@ function Article(){
                     <URL link="https://bitwarden.com" display=" Bitwarden."/></p> 
 
 
-                <Subheader name="Totrinnsbekreftelse"></Subheader>
-                <Text txt="ToTrinnsbekreftelse, eller 2FA (2 Factor Authentication) er et ekstra sikkerhetsnivå som krever at brukeren skriver inn en midlertidig tallkode
+                <Subheader name="To-Trinnsbekreftelse"></Subheader>
+                <Text txt="To-Trinnsbekreftelse, eller 2FA (2 Factor Authentication) er et ekstra sikkerhetsnivå som krever at brukeren skriver inn en midlertidig tallkode
                 generert av en app hver gang man logger inn på en konto."></Text>
                 <Text txt="2FA øker sikkerheten på en konto og gjør det mye vanskeligere for hackere å komme inn på brukerne dine, selv hvis de har tilgang til passordet ditt."></Text>
                 <Text txt="Mange steder støtter 2FA innlogging, og det er derfor anbefalt å aktivere dette når mulig."></Text>
@@ -74,6 +74,10 @@ function Article(){
                 <Text txt="Hvis et passord blir lekket gjennom en databreach og det samme passordet blir brukt flere steder, så betyr det at det samme passordet er tilgjenglig for andre."></Text>
                 <Text txt="Hvis dette skjer med et unikt passord for hver innlogging, så må bare ett passord bli endret. Men hvis dette skjer på et gjenbrukt passord, så er det mange flere passord som må oppdateres."></Text>
 
+                <Subheader name="Have I Been Pwned?"></Subheader>
+                <Text txt="Have I Been Pwned er en nettservice som lar brukere søke etter passord og email-adresser i kjente databreaches."></Text>
+                <Text txt="Hvis din informasjon er funnet på Have I Been Pwned, så betyr det at du burde forandre passordet knyttet til den brukeren."></Text>
+                <URL display="Have I Been Pwned?" link="https://haveibeenpwned.com/"></URL>
             </section>
         </div>
     )

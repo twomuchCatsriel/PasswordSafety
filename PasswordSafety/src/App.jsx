@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Navbar from './navbar'
 import LinkPath from './links'
 import Article from './Article'
+import PasswordCheck from './PasswordChecker'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div className="defaultMargins">
         <LinkPath/>
         <Article/>
+        <PasswordCheck/>
       </div>
 
     </div>
