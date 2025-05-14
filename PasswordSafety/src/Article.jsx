@@ -26,10 +26,13 @@ function Article(){
                 
                 <div className="Paragraphs">
                     <Highlight name="Passordet burde følge disse reglene:"></Highlight>
-                    <Text txt="1 - Passordet burde være 16 tegn eller lenger."></Text>
-                    <Text txt="2 - Passordet burde være unikt for hver eneste nettside."></Text>
-                    <Text txt="3 - Passordet burde ha både tall, spesialsymboler og en blanding av store og små bokstaver."></Text>
-                    <Text txt="4 - Passordet burde ikke ha ord eller tall som er koblet til deg. (Fødselsdato, Navn, Adresse osv.)"></Text>
+
+                    <ul id="list">
+                        <li>Passordet burde være 16 tegn eller lenger.</li>
+                        <li>Passordet burde være unikt for hver eneste nettside.</li>
+                        <li>Passordet burde ha både tall, spesialsymboler og en blanding av store og små bokstaver.</li>
+                        <li>Passordet burde ikke ha ord eller tall som er koblet til deg. (Fødselsdato, Navn, Adresse osv.)</li>
+                    </ul>
                 </div>
 
                 <div className="Paragraphs">
@@ -61,8 +64,8 @@ function Article(){
                 <Text txt="Mange steder støtter 2FA innlogging, og det er derfor anbefalt å aktivere dette når mulig."></Text>
 
                 <Subheader name="Andre sikkerhetstiltak"/>
-                <Text txt="Mange nettlesere tilbyr et alternativ som lagrer innlogginger for brukeren. Denne er ikke anbefalt å bruke,
-                siden den er enkel for hackere å finne informasjonen i."></Text>
+                <Text txt="Mange nettlesere har sine egne alternativer til passordhåndteringsprogrammer som er bygget inn.
+                Det er ikke anbefalt å bruke disse, siden disse er ofte ikke enkryptert til samme standard som vanlige passordhåndteringsprogrammer."></Text>
             </section>
         </div>
     )

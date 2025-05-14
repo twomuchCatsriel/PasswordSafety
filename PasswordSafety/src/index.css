@@ -70,6 +70,8 @@ nav ul{
 
 .Paragraphs{
   margin-top: 2%;
+  word-break:keep-all;
+  overflow-wrap: anywhere;
 }
 
 .boldTextClass{
@@ -86,6 +88,10 @@ nav ul{
   margin-top: 5px;
 }
 
+#list{
+  list-style-image: url(assets/green-check_png.png);
+}
+
 
 @media screen and (max-width: 480px) { /* Mobile Users */
   .subheaderText{
@@ -94,5 +100,9 @@ nav ul{
 
   #PasswordItems{
     margin-top: 10%;
+  }
+
+  .defaultMargins{
+    width: 80%;
   }
 }
