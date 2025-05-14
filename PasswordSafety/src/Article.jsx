@@ -59,13 +59,21 @@ function Article(){
 
                 <Subheader name="Totrinnsbekreftelse"></Subheader>
                 <Text txt="ToTrinnsbekreftelse, eller 2FA (2 Factor Authentication) er et ekstra sikkerhetsnivå som krever at brukeren skriver inn en midlertidig tallkode
-                hver gang man logger inn på en konto."></Text>
+                generert av en app hver gang man logger inn på en konto."></Text>
                 <Text txt="2FA øker sikkerheten på en konto og gjør det mye vanskeligere for hackere å komme inn på brukerne dine, selv hvis de har tilgang til passordet ditt."></Text>
                 <Text txt="Mange steder støtter 2FA innlogging, og det er derfor anbefalt å aktivere dette når mulig."></Text>
 
                 <Subheader name="Andre sikkerhetstiltak"/>
                 <Text txt="Mange nettlesere har sine egne alternativer til passordhåndteringsprogrammer som er bygget inn.
                 Det er ikke anbefalt å bruke disse, siden disse er ofte ikke enkryptert til samme standard som vanlige passordhåndteringsprogrammer."></Text>
+                <Text txt="Hvis du blir spurt om å lagre passordene dine av nettleseren, alltid takk nei og gjør det heller selv med et annet passordshåndteringsprogram. "></Text>
+                
+                <Subheader name="Hvorfor burde jeg ikke gjenbruke passordet mitt?"></Subheader>
+                <Text txt="Det er ganske vanlig for folk å gjenbruke et enkelt passord. Men dette er ikke en veldig god ide. Hvorfor?"></Text>
+                <Text txt="Det er flere mulige måter for et passord å bli lekket på. Den mest vanlige er hvis et selskap opplevde en databreach."></Text>
+                <Text txt="Hvis et passord blir lekket gjennom en databreach og det samme passordet blir brukt flere steder, så betyr det at det samme passordet er tilgjenglig for andre."></Text>
+                <Text txt="Hvis dette skjer med et unikt passord for hver innlogging, så må bare ett passord bli endret. Men hvis dette skjer på et gjenbrukt passord, så er det mange flere passord som må oppdateres."></Text>
+
             </section>
         </div>
     )
