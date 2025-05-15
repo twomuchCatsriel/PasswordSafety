@@ -96,15 +96,30 @@ nav ul{
   background-color: #ececec;
   border-radius: 15px;
   text-align: center;
+}
 
+#outerbox{
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
 .box{
-  text-align: center;
-  justify-content: center;
+  width: 48%;
+}
+
+#passwordField input{
+  width: 48.5%;
+  padding: 10px;
+}
+
+#passwordField p{
+  background-color: #8dc63f;
+  width: 50.5%;
+  margin: 0 auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 20px 0;
 }
 
 @media screen and (max-width: 480px) { /* Mobile Users */
@@ -117,6 +132,14 @@ nav ul{
   }
 
   .defaultMargins{
+    width: 80%;
+  }
+
+  #passwordField p{
+    width: 88%;
+  }
+
+  #passwordField input{
     width: 80%;
   }
 }
