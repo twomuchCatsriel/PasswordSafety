@@ -11,16 +11,16 @@ function PasswordCheck(){
 
             <div id="Checker">
                 
-                <Subheader name="Analyser et Passord" id="analyzeSub"></Subheader>
+                <Subheader name="Analyser et Passord" id="subheaderAnalyze"></Subheader>
 
                 <div id="passwordField">
                     <input type="text" placeholder="Passord"></input>
-                    <p>Sikkert Passord</p>
+                    <p>Farlig Usikkert Passord</p>
                 </div>
                 
                 <div id="outerbox">
                     <div className="leftField box">
-                        <Subheader name="Passord Information"></Subheader>
+
                     </div>
 
                     <div className="rightField box">

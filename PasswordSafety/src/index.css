@@ -98,6 +98,10 @@ nav ul{
   text-align: center;
 }
 
+#Checker h2{
+  padding-top: 20px;
+}
+
 #outerbox{
   display: flex;
   justify-content: center;
@@ -109,18 +113,19 @@ nav ul{
 }
 
 #passwordField input{
-  width: 48.5%;
+  width: 48%;
   padding: 10px;
 }
 
 #passwordField p{
-  background-color: #8dc63f;
-  width: 50.5%;
+  background-color: #ff1e1e;
+  width: 20%;
   margin: 0 auto;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding: 20px 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 10px 0;
 }
+
 
 @media screen and (max-width: 480px) { /* Mobile Users */
   .subheaderText{
