@@ -11,6 +11,7 @@ function PasswordCheck(){
     const [lowercase, setLowercase] = useState(0);// lowercase amount
     const [lengthOf, setLength] = useState(0); // password length
     const [finalGrade, setGrade] = useState("Farlig Usikkert Passord");
+    const SpecialCharacters = "~!@#$%^&*()_+=?/\"'¤`´¨;,:.-<>§|"
 
     return (
         <section id="passwordCheckSect">
@@ -48,9 +49,39 @@ function PasswordCheck(){
     )
 
     function HandleTyping(e){
-        let tar = e.target
-        setInput(tar.value);
-        setLength(tar.value.length)
+        let tar = e.target.value;
+        setInput(tar);
+        setLength(tar.length)
+        
+        let totalNumbers = 0; // Check for numbers
+        let totalLetters = [0/* lowerCase */, 0 /* upperCase */]
+        let totalSpec = 0;
+        for(let i = 0; i < tar.length; i++){ // Loop through the string to find special characters
+            if(!isNaN(tar[i])){ // If the Character of i is a number, add to the totalNums variable.
+                totalNumbers += 1; // add to the variable
+            } 
+            else // if the character isn't a number 
+            {
+                if(SpecialCharacters.indexOf(tar[i]) !== -1) // check if the character is a special character
+                {
+                    totalSpec += 1;
+                }
+                else if(tar[i] === tar[i].toUpperCase()) // if the character is text and uppercase
+                {
+                    totalLetters[1] += 1;
+                }
+                else{
+                    totalLetters[0] += 1; // If the character is text and lowercase
+                }
+            }
+
+        }
+
+        // Update all the states simultaneously
+        setNumbers(totalNumbers);
+        setCapital(totalLetters[1])
+        setLowercase(totalLetters[0])
+        setSpecial(totalSpec);
     }
 }
 
