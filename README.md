@@ -17,6 +17,7 @@ This project is created using VITE's React template. The file structure is quite
 # TO RUN
 To run this project, clone it for yourself and then run these commands:
 > cd PasswordSafety
+
 > npm run dev
 
 Then, open the development server. Node is required.
