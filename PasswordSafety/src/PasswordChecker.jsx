@@ -64,7 +64,11 @@ function PasswordCheck(){
                     </div>
 
                     <div className="rightField box">
-                        <p>test</p>
+                        <p>{lengthOf} / 14</p>
+                        <p>{special} / 1</p>
+                        <p>{numbers} / 1</p>
+                        <p>{capital} / 2</p>
+                        <p>{lowercase} / 2</p>
                     </div>
                 </div>
             </div>
@@ -137,6 +141,7 @@ function PasswordCheck(){
         // Set Grade
         if(points < 2){
             setGrade("Farlig")
+            
         }
         else if(points <= 4){
             setGrade("Litt Trygt")
