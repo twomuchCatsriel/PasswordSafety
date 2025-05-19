@@ -11,6 +11,8 @@ function PasswordCheck(){
     const [lowercase, setLowercase] = useState(0);// lowercase amount
     const [lengthOf, setLength] = useState(0); // password length
     const [finalGrade, setGrade] = useState("Farlig Usikkert Passord");
+    const [showPoints, setPoints] = useState(0); // points
+
     const SpecialCharacters = "~!@#$%^&*()_+=?/\"'¤`´¨;,:.-<>§|+"
     const commonPasswords = [
   "123456", "password", "12345678", "qwerty", "123456789",
@@ -50,7 +52,7 @@ function PasswordCheck(){
                     type="text"
                     placeholder="Passord"
                     onChange={HandleTyping}></input>
-                    <p>{finalGrade}</p>
+                    <p id="finalGradeBox">{finalGrade}</p>
                 </div>
                 
                 <div id="outerbox">
@@ -60,15 +62,17 @@ function PasswordCheck(){
                         <p>Tall: {numbers}</p>
                         <p>Store Bokstaver: {capital}</p>
                         <p>Små Bokstaver: {lowercase}</p>
+                        <p>Total Poeng: {showPoints}</p>
 
                     </div>
 
                     <div className="rightField box">
-                        <p>{lengthOf} / 14</p>
+                        <p>{lengthOf} / 16</p>
                         <p>{special} / 1</p>
                         <p>{numbers} / 1</p>
                         <p>{capital} / 2</p>
                         <p>{lowercase} / 2</p>
+                        <p>{showPoints} / 6</p>
                     </div>
                 </div>
             </div>
@@ -76,6 +80,8 @@ function PasswordCheck(){
     )
 
     function HandleTyping(e){
+        const finalGradeBox = document.getElementById("finalGradeBox");
+
         let tar = e.target.value;
         setInput(tar);
         setLength(tar.length)
@@ -110,9 +116,11 @@ function PasswordCheck(){
         if(totalSpec > 0){ // Special Characters
             points += 1;
         }
+
         if(totalNumbers > 0){  // numbers 
             points += 1;
         }
+
         if(totalLetters[0] >= 2){ // LowerCase Letters
             points += 1;
         }
@@ -120,19 +128,25 @@ function PasswordCheck(){
             points += 1;
         }
 
-        if(tar.length <= 4){ // Less than 4 characters
-            points -= 1;
+
+        if(tar.length == 0){ // If the length is 0, display 0 Points
+            points = 0;
+        } 
+        else{ // If the password is not 0 characters, then the normal password rules apply
+            if(tar.length <= 6){
+                points -= 2;
+            } 
+            else if(tar.length < 8){
+                points -= 1;
+            } 
+            else if(tar.length < 16){
+                points += 1;
+            }
+            else if(tar.length >= 16){
+                points += 2;
+            }
         }
-        if(tar.length < 8){ // Less than 8 characters
-            points -= 1;
-        }
-        
-        if(tar.length >= 8){ // 8 or More 
-            points += 1;
-        }
-        if(tar.length >= 14){ // 14 or More
-            points += 1;
-        }
+
 
         if(commonPasswords.includes(tar.toLowerCase())){ // If password is among the global top 100 most used passwords
             points = 0;
@@ -141,23 +155,23 @@ function PasswordCheck(){
         // Set Grade
         if(points < 2){
             setGrade("Farlig")
-            
+            finalGradeBox.style.backgroundColor="#ff1e1e"; // Set to red
         }
         else if(points <= 4){
             setGrade("Litt Trygt")
+            finalGradeBox.style.backgroundColor="orange" // Set to Orange 
         }
         else if(points == 5){
             setGrade("Trygt")
+            finalGradeBox.style.backgroundColor="gold" // Set to Gold 
         }
         else if(points == 6){
             setGrade("Ekstremt Trygt")
+            finalGradeBox.style.backgroundColor="#8dc63f" // set to Green
         }
 
-
-
-        
-
         // Update all the states simultaneously
+        setPoints(points);
         setNumbers(totalNumbers);
         setCapital(totalLetters[1])
         setLowercase(totalLetters[0])
