@@ -147,10 +147,18 @@ function PasswordCheck(){
             }
         }
 
+        if(tar.length < 16){
+            for(let i = 0; i < commonPasswords.length; i++){ // Test if the password is in the most common used passwords
+                let word = tar.toLowerCase();
 
-        if(commonPasswords.includes(tar.toLowerCase())){ // If password is among the global top 100 most used passwords
-            points = 0;
+                if(word.indexOf(commonPasswords[i]) !== -1)
+                {
+                    points = -50;
+
+                }
+            }
         }
+
 
         // Set Grade
         if(points < 2){
@@ -169,6 +177,8 @@ function PasswordCheck(){
             setGrade("Ekstremt Trygt")
             finalGradeBox.style.backgroundColor="#8dc63f" // set to Green
         }
+
+
 
         // Update all the states simultaneously
         setPoints(points);
