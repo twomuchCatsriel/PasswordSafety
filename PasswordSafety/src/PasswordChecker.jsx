@@ -12,6 +12,7 @@ function PasswordCheck(){
     const [finalGrade, setGrade] = useState("Farlig"); // Final Password Grade
     const [showPoints, setPoints] = useState(0); // points
     const [warningMessage, setWarning] = useState("");
+    const [lengthToAccept, setAcceptableLength] = useState(16)
 
     const SpecialCharacters = "~!@#$%^&*()_+=?/\"'¤`´¨;,:.-<>§|+{}\\"
     const commonPasswords = [
@@ -63,7 +64,7 @@ function PasswordCheck(){
                     </div>
 
                     <div className="rightField box">
-                        <p>{lengthOf} / 16</p>
+                        <p>{lengthOf} / {lengthToAccept}</p>
                         <p>{special} / 1</p>
                         <p>{numbers} / 1</p>
                         <p>{capital} / 2</p>
@@ -143,7 +144,7 @@ function PasswordCheck(){
             }
         }
 
-        if(tar.length < 16){
+        if(tar.length < 20){
             for(let i = 0; i < commonPasswords.length; i++){ // Test if the password is in the most common used passwords
                 let word = tar.toLowerCase();
 
@@ -151,11 +152,14 @@ function PasswordCheck(){
                 {
                     points = -50;
                     setWarning("Ditt passord inneholder minst et ord som ligger på listen av verdens mest brukte passord. Vurder å endre lengden av passordet, eller å bytte passord. (" + commonPasswords[i] + ")")
-
+                    setAcceptableLength(20)
+                    break
+                }
+                else{
+                    setAcceptableLength(16)
                 }
             }
         }
-
 
         // Set Grade
         if(points < 2){
