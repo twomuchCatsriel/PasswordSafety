@@ -152,8 +152,7 @@ function PasswordCheck(){
                 {
                     points = -50;
                     setWarning("Ditt passord inneholder minst et ord som ligger på listen av verdens mest brukte passord. Vurder å endre lengden av passordet, eller å bytte passord. (" + commonPasswords[i] + ")")
-                    setAcceptableLength(20)
-                    break
+                    setAcceptableLength(20) // Bug : Break causes loop to end if any version of the word is found.
                 }
                 else{
                     setAcceptableLength(16)
