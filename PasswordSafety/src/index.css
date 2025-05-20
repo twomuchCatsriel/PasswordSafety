@@ -126,6 +126,16 @@ nav ul{
   padding: 10px 0;
 }
 
+#warningText{
+  width: 60%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.forceRed{
+  color: red;
+}
+
 
 @media screen and (max-width: 480px) { /* Mobile Users */
   .subheaderText{

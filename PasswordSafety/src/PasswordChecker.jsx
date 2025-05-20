@@ -4,38 +4,34 @@ import Text from "./text";
 import Subheader from "./subheader";
 
 function PasswordCheck(){
-    const [inputfield, setInput] = useState(""); // user input
     const [special, setSpecial] = useState(0); // special character amount
     const [numbers, setNumbers] = useState(0); // number amount
     const [capital, setCapital] = useState(0); // capital letter amount
     const [lowercase, setLowercase] = useState(0);// lowercase amount
     const [lengthOf, setLength] = useState(0); // password length
-    const [finalGrade, setGrade] = useState("Farlig Usikkert Passord");
+    const [finalGrade, setGrade] = useState("Farlig"); // Final Password Grade
     const [showPoints, setPoints] = useState(0); // points
+    const [warningMessage, setWarning] = useState("");
 
-    const SpecialCharacters = "~!@#$%^&*()_+=?/\"'¤`´¨;,:.-<>§|+"
+    const SpecialCharacters = "~!@#$%^&*()_+=?/\"'¤`´¨;,:.-<>§|+{}\\"
     const commonPasswords = [
-  "123456", "password", "12345678", "qwerty", "123456789",
-  "12345", "1234", "111111", "1234567", "dragon",
-  "123123", "baseball", "abc123", "football", "monkey",
-  "letmein", "696969", "shadow", "master", "666666",
-  "qwertyuiop", "123321", "mustang", "1234567890", "michael",
-  "654321", "pussy", "superman", "1qaz2wsx", "7777777",
-  "fuckyou", "121212", "000000", "qazwsx", "123qwe",
-  "killer", "trustno1", "jordan", "jennifer", "zxcvbnm",
-  "asdfgh", "hunter", "buster", "soccer", "harley",
-  "batman", "andrew", "tigger", "sunshine", "iloveyou",
-  "fuckme", "2000", "charlie", "robert", "thomas",
-  "hockey", "ranger", "daniel", "starwars", "klaster",
-  "112233", "george", "asshole", "computer", "michelle",
-  "jessica", "pepper", "1111", "zxcvbn", "555555",
-  "11111111", "131313", "freedom", "777777", "pass",
-  "fuck", "maggie", "159753", "aaaaaa", "ginger",
-  "princess", "joshua", "cheese", "amanda", "summer",
-  "love", "ashley", "6969", "nicole", "chelsea",
-  "biteme", "matthew", "access", "yankees", "987654321",
-  "dallas", "austin", "thunder", "taylor", "matrix"
+  "pass", "1234", "1235", "1111", "6969", "fuck", "1111",
+  "0000", "aaaa", "love", "fuck", "biteme", "killer", "master", "monkey",
+  "shadow", "dragon", "baseball", "football", "sunshine", "charlie", "computer",
+  "password", "michelle", "freedom", "chelsea", "summer", "ginger", "maggie",
+  "jessica", "amanda", "princess", "ashley", "nicole", "pepper", "soccer",
+  "batman", "andrew", "tigger", "harley", "buster", "hunter", "jordan",
+  "jennifer", "thomas", "robert", "daniel", "ranger", "george", "matrix",
+  "austin", "dallas", "taylor", "access", "yankees", "thunder", "klaster",
+  "starwars", "mustang", "michael", "letmein", "trustno1", "1qaz2wsx", "123qwe",
+  "zxcvbnm", "asdfgh", "qazwsx", "qwerty", "zxcvbn", "131313", "121212", "123123",
+  "123321", "112233", "777777", "666666", "696969", "555555", "159753", "111111",
+  "7777777", "11111111", "123456", "1234567", "12345678", "123456789", "1234567890",
+  "qwertyuiop", "abc123", "1qaz2wsx", "987654321", "654321", "123123", "123321",
+  "qwerty", "asdfgh", "zxcvbn", "fuckyou", "fuckme", "pussy", "asshole", "superman",
+  "iloveyou"
 ];
+
 
 
     return (
@@ -54,7 +50,7 @@ function PasswordCheck(){
                     onChange={HandleTyping}></input>
                     <p id="finalGradeBox">{finalGrade}</p>
                 </div>
-                
+                <p className="forceRed" id="warningText">{warningMessage}</p>
                 <div id="outerbox">
                     <div className="leftField box">
                         <p>Lengde: {lengthOf}</p>
@@ -83,8 +79,8 @@ function PasswordCheck(){
         const finalGradeBox = document.getElementById("finalGradeBox");
 
         let tar = e.target.value;
-        setInput(tar);
         setLength(tar.length)
+        setWarning("")
         
         let totalNumbers = 0; // Check for numbers
         let totalLetters = [0/* lowerCase */, 0 /* upperCase */]
@@ -133,16 +129,16 @@ function PasswordCheck(){
             points = 0;
         } 
         else{ // If the password is not 0 characters, then the normal password rules apply
-            if(tar.length <= 6){
-                points -= 2;
+            if(tar.length <= 6){ // If length is less than or equal to 6
+                points -= 2; 
             } 
-            else if(tar.length < 8){
+            else if(tar.length <= 8){ // Else if Password is shorter than or equal to 8 (7 or 8)
                 points -= 1;
             } 
-            else if(tar.length < 16){
+            else if(tar.length < 16){ // Else if Password is between the range of 9-15
                 points += 1;
             }
-            else if(tar.length >= 16){
+            else if(tar.length >= 16){ // Else if Password is greater than or equal to 16 characters in length
                 points += 2;
             }
         }
@@ -151,9 +147,10 @@ function PasswordCheck(){
             for(let i = 0; i < commonPasswords.length; i++){ // Test if the password is in the most common used passwords
                 let word = tar.toLowerCase();
 
-                if(word.indexOf(commonPasswords[i]) !== -1)
+                if(word.indexOf(commonPasswords[i]) !== -1) // If one of the common passwords are found in the password
                 {
                     points = -50;
+                    setWarning("Ditt passord inneholder minst et ord som ligger på listen av verdens mest brukte passord. Vurder å endre lengden av passordet, eller å bytte passord. (" + commonPasswords[i] + ")")
 
                 }
             }
@@ -177,8 +174,6 @@ function PasswordCheck(){
             setGrade("Ekstremt Trygt")
             finalGradeBox.style.backgroundColor="#8dc63f" // set to Green
         }
-
-
 
         // Update all the states simultaneously
         setPoints(points);
