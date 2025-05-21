@@ -61,7 +61,7 @@ function Article(){
                 <Text txt="To-Trinnsbekreftelse, eller 2FA (2 Factor Authentication) er et ekstra sikkerhetsnivå som krever at brukeren skriver inn en midlertidig tallkode
                 generert av en app hver gang man logger inn på en konto."></Text>
                 <Text txt="2FA øker sikkerheten på en konto og gjør det mye vanskeligere for hackere å komme inn på brukerne dine, selv hvis de har tilgang til passordet ditt."></Text>
-                <Text txt="Mange steder støtter 2FA innlogging, og det er derfor anbefalt å aktivere dette når mulig."></Text>
+                <Text txt="Mange steder støtter 2FA innlogging, og det er anbefalt å aktivere dette når mulig."></Text>
 
                 <Subheader name="Andre sikkerhetstiltak"/>
                 <Text txt="Mange nettlesere har sine egne alternativer til passordhåndteringsprogrammer som er bygget inn.
@@ -70,13 +70,14 @@ function Article(){
                 
                 <Subheader name="Hvorfor burde jeg ikke gjenbruke passordet mitt?"></Subheader>
                 <Text txt="Det er ganske vanlig for folk å gjenbruke et enkelt passord. Men dette er ikke en veldig god ide. Hvorfor?"></Text>
-                <Text txt="Det er flere mulige måter for et passord å bli lekket på. Den mest vanlige er hvis et selskap opplevde en databreach."></Text>
-                <Text txt="Hvis et passord blir lekket gjennom en databreach og det samme passordet blir brukt flere steder, så betyr det at det samme passordet er tilgjenglig for andre."></Text>
-                <Text txt="Hvis dette skjer med et unikt passord for hver innlogging, så må bare ett passord bli endret. Men hvis dette skjer på et gjenbrukt passord, så er det mange flere passord som må oppdateres."></Text>
+                <Text txt="Det er flere mulige måter for et passord å bli lekket på, men den vanligste måten er hvis et selskap opplevde en datalekasje."></Text>
+                <Text txt="Hvis et passord kommer på avveie, så er det mye enklere å bytte ut ett passord enn å bytte ut mange passord med et nytt et. "></Text>
+                <Text txt="Ved å bruke forskjellige passord, så øker du sikkerheten din digitalt."></Text>
 
                 <Subheader name="Have I Been Pwned?"></Subheader>
-                <Text txt="Have I Been Pwned er en nettservice som lar brukere søke etter passord og email-adresser i kjente databreaches."></Text>
-                <Text txt="Hvis din informasjon er funnet på Have I Been Pwned, så betyr det at du burde forandre passordet knyttet til den brukeren."></Text>
+                <Text txt="Have I Been Pwned er en nettservice som lar brukere søke etter passord og email-adresser i kjente datalekasjer."></Text>
+                <Text txt="Hvis din informasjon er funnet på Have I Been Pwned, så betyr det at din informasjon var påvirket av en datalekasje."></Text>
+                <Text txt="Da er det anbefalt å bytte ut passordet med ett nytt, sikkert passord."></Text>
                 <URL display="Have I Been Pwned?" link="https://haveibeenpwned.com/"></URL>
             </section>
         </div>
