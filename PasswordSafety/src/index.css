@@ -136,6 +136,15 @@ nav ul{
   color: red;
 }
 
+.lastUpdated{
+  background-color: #ececec;
+  margin-top: 40px;
+}
+
+.lastUpdated p{
+  padding: 20px;
+}
+
 
 @media screen and (max-width: 480px) { /* Mobile Users */
   .subheaderText{

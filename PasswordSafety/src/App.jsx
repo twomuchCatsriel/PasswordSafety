@@ -5,6 +5,7 @@ import Navbar from './navbar'
 import LinkPath from './links'
 import Article from './Article'
 import PasswordCheck from './PasswordChecker'
+import LastUpdated from './lastupdated'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <LinkPath/>
         <Article/>
         <PasswordCheck/>
+        <LastUpdated date="21. mai 2025"/>
       </div>
 
     </div>
