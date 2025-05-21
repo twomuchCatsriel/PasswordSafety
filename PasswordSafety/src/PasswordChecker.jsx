@@ -82,6 +82,7 @@ function PasswordCheck(){
         let tar = e.target.value;
         setLength(tar.length)
         setWarning("")
+        setAcceptableLength(16);
         
         let totalNumbers = 0; // Check for numbers
         let totalLetters = [0/* lowerCase */, 0 /* upperCase */]
@@ -152,10 +153,7 @@ function PasswordCheck(){
                 {
                     points = -50;
                     setWarning("Ditt passord inneholder minst et ord som ligger på listen av verdens mest brukte passord. Vurder å endre lengden av passordet, eller å bytte passord. (" + commonPasswords[i] + ")")
-                    setAcceptableLength(20) // Bug : Break causes loop to end if any version of the word is found.
-                }
-                else{
-                    setAcceptableLength(16)
+                    setAcceptableLength(20)
                 }
             }
         }
