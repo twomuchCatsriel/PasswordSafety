@@ -25,7 +25,7 @@ function Article(){
                 
                 
                 <div className="Paragraphs">
-                    <Highlight name="Passordet burde følge disse reglene:"></Highlight>
+                    <Highlight name="Et sikkert Passord burde følge disse reglene:"></Highlight>
 
                     <ul id="list">
                         <li>Passordet burde være 16 tegn eller lenger.</li>
@@ -52,7 +52,7 @@ function Article(){
                 <Text txt="Et sterkt passord kan være vanskelig å huske, hvertfall hvis du bruker et forksjellig passord overalt. Så, hva gjør man da?"></Text>
                 <Text txt="Den enkleste og mest populære løsningen er å bruke et Passordhåndteringsprogram (Password Manager)."/>
                 <Text txt="Et Passordhåndteringsprogram er et sikkert program som lagrer passordene dine i en sikker, kryptert sky."></Text>
-                <Text txt="Alt du trenger å huske er ett mesterpassord, som burde skrives ned og lagres på et sikkert sted."></Text>
+                <Text txt="Alt du trenger å huske er ett mesterpassord, som burde skrives ned og lagret på et sikkert sted."></Text>
                 <p className="textObject">Det finnes mange gode passordhåndteringsprogrammer. Noen programmer er også gratis å bruke, slik som 
                     <URL link="https://bitwarden.com" display=" Bitwarden."/></p> 
 
@@ -60,13 +60,19 @@ function Article(){
                 <Subheader name="To-Trinnsbekreftelse"></Subheader>
                 <Text txt="To-Trinnsbekreftelse, eller 2FA (2 Factor Authentication) er et ekstra sikkerhetsnivå som krever at brukeren skriver inn en midlertidig tallkode
                 generert av en app hver gang man logger inn på en konto."></Text>
-                <Text txt="2FA øker sikkerheten på en konto og gjør det mye vanskeligere for hackere å komme inn på brukerne dine, selv hvis de har tilgang til passordet ditt."></Text>
+                <Text txt="2FA øker sikkerheten på en konto og gjør det mye vanskeligere for mulige hackere å komme inn på brukerne dine, selv hvis de har tilgang til passordet ditt."></Text>
                 <Text txt="Mange steder støtter 2FA innlogging, og det er anbefalt å aktivere dette når mulig."></Text>
+                <Text txt="Hvis mulig, er det anbefalt å ikke bruke SMS-2FA. Dette er fordi det er mulig for hackere å få ta over en SMS, slik at de får tilgang til 2FA koden din."></Text>
+                <Text txt="Alltid bruk App-2FA, siden det gjør det umulig for hackere å få tilgang til 2FA-koden uten å ha tilgang til telefonen din."></Text>
 
                 <Subheader name="Andre sikkerhetstiltak"/>
                 <Text txt="Mange nettlesere har sine egne alternativer til passordhåndteringsprogrammer som er bygget inn.
                 Det er ikke anbefalt å bruke disse, siden disse er ofte ikke enkryptert til samme standard som vanlige passordhåndteringsprogrammer."></Text>
                 <Text txt="Hvis du blir spurt om å lagre passordene dine av nettleseren, alltid takk nei og gjør det heller selv med et annet passordshåndteringsprogram. "></Text>
+                <Text txt="Det er også anbefalt å bruke et programgenerert passord, hvertfall hvis du bruker et passordhåndteringsprogram."></Text>
+                <Text txt="Programgenerete passord er satt sammen av tilfeldige bokstaver, tall og symboler og er sikrere enn vanlige passord."></Text>
+                <Text txt="De fleste nettlesere har en innebygget Passord-generator som er veldig effektiv."></Text>
+                <p className="textObject">En annen effektiv passordgenerator er <URL display="1Password" link="https://1password.com/password-generator"></URL>.</p>
                 
                 <Subheader name="Hvorfor burde jeg ikke gjenbruke passordet mitt?"></Subheader>
                 <Text txt="Det er ganske vanlig for folk å gjenbruke et enkelt passord. Men dette er ikke en veldig god ide. Hvorfor?"></Text>
